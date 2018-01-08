@@ -23,7 +23,7 @@ optimal_form_functions { T T D T T SD D T SD T SD T SD SD SD D T T D T T SD D T 
 end_times { 1 5 9 13 17 21 25 29 }
 decs { decA decA1 decA2 decB1 decB2 decC }
 functions { T D SD }
-terminals { i isus4 im immaj i6 i7 bii biisus2 iim7 ii7 iiim iiim7 iiio iv ivsus4 iv6 iv7 ivm v7 vo bvi bviim i i6 i7 iim7 ii7 iv iv6 v7 }
+terminals { i isus4 im immaj i6 i7 bii biisus2 iim7 ii7 iiim iiim7 iiio iv ivsus4 iv6 iv7 ivm v7 vo bvi bviim i i6 i7 iim7 ii7 iv iv6 v7 i5 iib5 biii5 iv5 v5 bvi5 bvii5 }
 
 
 //decision_heads dec_* //apply to decision_bars elem
@@ -81,6 +81,8 @@ rule: decA2 -> 0.4 T T
 			-> 0.3 D D :end_rule
 
 
+
+rule: T_1 -> 1.0 I :end_rule
 
 rule: T -> 0.9 I
 		-> 0.1 IIIo :end_rule
@@ -179,7 +181,7 @@ NEW_GRAMMAR 2 //A train grammar
  end_times { 1 5 9 13 17 21 25 29 }
  decs { decT decSD decCad }
  functions { T D SD }
- terminals { i i6 i7 iim7 ii7 iv iv6 v7 isus4 im immaj bii biisus2 iiim iiim7 iiio ivsus4 iv7 ivm vo bvi bviim }
+ terminals { i i6 i7 iim7 ii7 iv iv6 v7 isus4 im immaj bii biisus2 iiim iiim7 iiio ivsus4 iv7 ivm vo bvi bviim i5 iib5 biii5 iv5 v5 bvi5 bvii5 }
  
  rule: S -> 1.0 SectA(1) SectA(9) SectB(17) SectA(25) //SectC(16) SectA(24) //SectB(2) //SectA(8) SectC(8) //
  :end_rule
@@ -263,27 +265,46 @@ NEW_GRAMMAR 3 //3rd trial grammar
  form_length 32
  harmonic_rhythm 1 //each non-t production applies to 1 bar (e.g. I1 : 1, I2 : 2), i.e. seq_t[3]==1, seq_t[3]==2 etc.
  //end_times { 1 5 9 13 }
- optimal_form_functions { T T SD SD SD D T T T T SD SD SD D T T SD SD SD SD SD SD SD D T T SD SD SD D T T }
+ optimal_form_functions { T SD D T SD SD T SD T T T SD SD D SD SD T T SD SD SD SD D T SD T SD SD D T SD T }
  end_times { 1 5 9 13 17 21 25 29 }
  decs { decA decB }
  functions { T D SD }
  //terminals { immaj iv7 vo }
-terminals { i isus4 im immaj i6 i7 bii biisus2 iim7 ii7 iiim iiim7 iiio iv ivsus4 iv6 iv7 ivm v7 vo bvi bviim i i6 i7 iim7 ii7 iv iv6 v7 i i6 i7 iim7 ii7 iv iv6 v7 isus4 im immaj bii biisus2 iiim iiim7 iiio ivsus4 iv7 ivm vo bvi bviim }
+terminals { i5 iib5 biii5 iv5 v5 bvi5 bvii5 i isus4 im immaj i6 i7 bii biisus2 iim7 ii7 iiim iiim7 iiio iv ivsus4 iv6 iv7 ivm v7 vo bvi bviim i i6 i7 iim7 ii7 iv iv6 v7 i i6 i7 iim7 ii7 iv iv6 v7 isus4 im immaj bii biisus2 iiim iiim7 iiio ivsus4 iv7 ivm vo bvi bviim }
  
- rule: S -> 1.0 SectA(1) SectA(9) SectB(17) SectA(25) //SectC(16) SectA(24) //SectB(2) //SectA(8) SectC(8) //
- :end_rule
- 
- //rule: SectA -> 1.0 decA(1) decA2(5) //could be decA1(1) decA2(5) || decA(1) decA(5) || dec(1) dec(5) for dec_1 dec_5 etc..
+ rule: S -> 1.0 SectA(1) SectB(9) SectC(17) SectD(25) //SectC(16) SectA(24) //SectB(2) //SectA(8) SectC(8) //
  :end_rule
  
 
-rule: SectA -> 1.0 decA(1) decA(5) :end_rule
-//rule: SectA2 -> 1.0 decT(1) decDD(3) decCad(5) decT2(7) :end_rule
-rule: SectB -> 1.0 decB(1) decB(5) :end_rule
+rule: SectA -> 1.0 decA1(1) decA2(5) :end_rule
+rule: SectB -> 1.0 decB1(1) decB2(5) :end_rule
+rule: SectC -> 1.0 decC1(1) decC2(5) :end_rule
+rule: SectD -> 1.0 decD1(1) decD2(5) :end_rule
 
-rule: decA -> 1.0 T SD T SD :end_rule
-rule: decB -> 1.0 D D D D :end_rule
+rule: decA1 -> 1.0 T T T T :end_rule
+rule: decA2 -> 1.0 SD SD T T :end_rule
+rule: decB1 -> 1.0 D D SD D :end_rule
+rule: decB2 -> 1.0 D SD T D :end_rule
+rule: decC1 -> 1.0 T T T T :end_rule
+rule: decC2 -> 1.0 SD SD SD SD :end_rule
+rule: decD1 -> 1.0 T T T T :end_rule
+rule: decD2 -> 1.0 D D D D :end_rule
 
-rule: T -> 1.0 immaj :end_rule
-rule: SD -> 1.0 iv7 :end_rule
-rule: D -> 1.0 vo :end_rule
+rule: T_1 -> 1.0 I :end_rule
+
+rule: I -> 1.0 i5 :end_rule
+
+rule: T -> 0.4 i5
+		-> 0.4 biii5
+		-> 0.1 iv5
+		-> 0.1 bvi5 :end_rule
+
+rule: SD -> 1.0 iv5
+		 -> 1.0 bvi5
+		 -> 1.0 iib5 :end_rule
+
+rule: D -> 0.7 bvii5
+		-> 0.3 v5 :end_rule
+
+
+rule: rec -> 1.0 iib5 :end_rule

@@ -1159,6 +1159,15 @@ map<string, vector<int>> Blues_structure::chord_translation{//no static here
     {"bvi", {44, 0}},
     {"bviim", {46, 1}},
     
+    //power chords
+    {"bvii5", {46, 11}},
+    {"v5", {43, 11}},
+    {"i5", {48, 11}},
+    {"iib5", {50, 12}},
+    {"biii5", {51, 11}},
+    {"iv5", {53, 11}},
+    {"bvi5", {44, 11}},
+    
 };
 
 
@@ -1177,6 +1186,8 @@ vector<int> Blues_structure::get_chord(int root_pitch, int type, int invert, boo
     else if (type == 8) chord_set = {0, 3, 7, 11};
     else if (type == 9) chord_set = {0, 5, 7};//sus4
     else if (type == 10) chord_set = {0, 2, 7};//sus2
+    else if (type == 11) chord_set = {0, 7, 12};//5 (power chord)
+    else if (type == 12) chord_set = {0, 7, 12};//b5 (diminished power chord)
     //else if (more chord types)
     
     /*

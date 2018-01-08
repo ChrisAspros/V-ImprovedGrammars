@@ -11,7 +11,7 @@
 
 void Logger::setup(){
     
-    log_path = "/Users/christodoulosaspromallis/Documents/UCL/PhD_Y_3/OF/of_v0.9.8_osx_release/apps/myApps/UnityRecovery3rdGrammar/bin/data/Log/";
+    log_path = "/Users/christodoulosaspromallis/Documents/UCL/PhD_Y_3/OF/of_v0.9.8_osx_release/apps/myApps/V-ImprovedGrammars/bin/data/Log/";
     
     generate_ID();
     //ID += ":Petrie_Intel_sIdeal_tracked";//add system version

@@ -1,0 +1,230 @@
+
+============REAL TIME LOG (start):============
+the_rule: S, 
+new cycle (update_cycle()): SectA        SectB        SectA        SectC        
+=======
+is_terminal?: SectA
+
+the_rule: SectA, 
+new cycle (update_cycle()): decA    decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: decA
+
+the_rule: decA, 
+new cycle (update_cycle()): T SD D T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: T
+
+the_rule: T, 
+new cycle (update_cycle()): I SD D T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: I
+
+the_rule: I, 
+new cycle (update_cycle()): isus4 SD D T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: isus4
+
+
+[global_bt : 1] [timestamp : [54:36.347] 
+the_rule: SD, 
+new cycle (update_cycle()): isus4 bII D T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: bII
+
+the_rule: bII, 
+new cycle (update_cycle()): isus4 biisus2 D T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: biisus2
+
+
+[global_bt : 2] [timestamp : [54:36.886] 
+the_rule: D, 
+new cycle (update_cycle()): isus4 biisus2 bVII T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: bVII
+
+the_rule: bVII, 
+new cycle (update_cycle()): isus4 biisus2 bviim T decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: bviim
+
+
+[global_bt : 3] [timestamp : [54:37.397] 
+the_rule: T, 
+new cycle (update_cycle()): isus4 biisus2 bviim I decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: I
+
+the_rule: I, 
+new cycle (update_cycle()): isus4 biisus2 bviim isus4 decA1  decA2  SectB        SectA        SectC        
+=======
+is_terminal?: isus4
+
+
+[global_bt : 4] [timestamp : [54:37.727] 
+the_rule: decA1, 
+new cycle (update_cycle()): isus4 biisus2 bviim isus4 T SD decA2  SectB        SectA        SectC        
+=======
+is_terminal?: T
+
+the_rule: T, 
+new cycle (update_cycle()): isus4 biisus2 bviim isus4 I SD decA2  SectB        SectA        SectC        
+=======
+is_terminal?: I
+
+the_rule: I, 
+new cycle (update_cycle()): isus4 biisus2 bviim isus4 isus4 SD decA2  SectB        SectA        SectC        
+=======
+is_terminal?: isus4
+
+
+[global_bt : 5] [timestamp : [54:38.048] 
+
+============REAL TIME LOG (end):============
+
+
+
+FINAL CYCLE
+[symbols : times]
+[isus4 : 0][biisus2 : 1][bviim : 2][isus4 : 3][isus4 : 4]
+
+============Transition data (start):============
+
+============:Transition data (end)============
+
+
+============Grammars log (start):============
+
+======== NEW GRAMMAR: 0 ========
+time signature: 4
+form length: 32
+harm rhythm: 1
+optimal_form_functions: T, T, D, T, T, SD, D, T, SD, T, SD, T, SD, SD, SD, D, T, T, D, T, T, SD, D, T, SD, T, D, T, SD, T, D, T, 
+end times: 0, 4, 8, 12, 16, 20, 24, 28, 
+decs: decA, decA1, decA2, decB1, decB2, decC, 
+decs population size: 6
+
+functions: T, D, SD, 
+functions population size: 3
+
+terminals: i, isus4, im, immaj, i6, i7, bii, biisus2, iim7, ii7, iiim, iiim7, iiio, iv, ivsus4, iv6, iv7, ivm, v7, vo, bvi, bviim, i, i6, i7, iim7, ii7, iv, iv6, v7, 
+terminals population size: 30
+(for note-set comparison of chords, i.e. support for style difference?
+
+======== NEW GRAMMAR: 1 ========
+time signature: 4
+form length: 32
+harm rhythm: 1
+optimal_form_functions: T, T, SD, SD, SD, D, T, T, T, T, SD, SD, SD, D, T, T, SD, SD, SD, SD, SD, SD, SD, D, T, T, SD, SD, SD, D, T, T, 
+end times: 0, 4, 8, 12, 16, 20, 24, 28, 
+decs: decT, decSD, decCad, 
+decs population size: 3
+
+functions: T, D, SD, 
+functions population size: 3
+
+terminals: i, i6, i7, iim7, ii7, iv, iv6, v7, isus4, im, immaj, bii, biisus2, iiim, iiim7, iiio, ivsus4, iv7, ivm, vo, bvi, bviim, 
+terminals population size: 22
+(for note-set comparison of chords, i.e. support for style difference?
+
+======== NEW GRAMMAR: 2 ========
+time signature: 4
+form length: 32
+harm rhythm: 1
+optimal_form_functions: T, SD, D, T, SD, SD, T, SD, T, T, T, SD, SD, D, SD, SD, T, T, SD, SD, SD, SD, D, T, SD, T, SD, SD, D, T, SD, T, 
+end times: 0, 4, 8, 12, 16, 20, 24, 28, 
+decs: decA, decB, 
+decs population size: 2
+
+functions: T, D, SD, 
+functions population size: 3
+
+terminals: i, isus4, im, immaj, i6, i7, bii, biisus2, iim7, ii7, iiim, iiim7, iiio, iv, ivsus4, iv6, iv7, ivm, v7, vo, bvi, bviim, i, i6, i7, iim7, ii7, iv, iv6, v7, i, i6, i7, iim7, ii7, iv, iv6, v7, isus4, im, immaj, bii, biisus2, iiim, iiim7, iiio, ivsus4, iv7, ivm, vo, bvi, bviim, 
+terminals population size: 52
+(for note-set comparison of chords, i.e. support for style difference?
+
+
+||||||||| Grammar * (rules overview) |||||||||
+S rule: sects: [symbol : prod_time]
+[SectA(1) : 0][SectB(9) : 8][SectA(17) : 16][SectC(25) : 24]]
+======== RULE FAMILIES ========
+timed_rules pop size: 7
+general_rules pop size: 28
+======== NOT-T FAMILIES ========
+Sect number (i.e. Sects / form_length): 4
+-Average bars / sect: 8
+SectA(1) dec number: 3 || SectA(1) dec number: 2 || SectA(1) dec number: 4 || SectB(9) dec number: 3 || SectB(9) dec number: 2 || SectB(9) dec number: 4 || SectA(17) dec number: 3 || SectA(17) dec number: 2 || SectA(17) dec number: 4 || SectC(25) dec number: 3 || SectC(25) dec number: 2 || SectC(25) dec number: 4 || 
+-Average bars / dec: 2.66667
+
+boring / repetitive??
+
+
+||||||||| Grammar * (rules overview) |||||||||
+S rule: sects: [symbol : prod_time]
+[SectA(1) : 0][SectA(9) : 8][SectB(17) : 16][SectA(25) : 24]]
+======== RULE FAMILIES ========
+timed_rules pop size: 7
+general_rules pop size: 14
+======== NOT-T FAMILIES ========
+Sect number (i.e. Sects / form_length): 4
+-Average bars / sect: 8
+SectA(1) dec number: 4 || SectA(1) dec number: 3 || SectA(9) dec number: 4 || SectA(9) dec number: 3 || SectB(17) dec number: 4 || SectB(17) dec number: 3 || SectA(25) dec number: 4 || SectA(25) dec number: 3 || 
+-Average bars / dec: 2.28571
+
+boring / repetitive??
+
+
+||||||||| Grammar * (rules overview) |||||||||
+S rule: sects: [symbol : prod_time]
+[SectA(1) : 0][SectB(17) : 16]]
+======== RULE FAMILIES ========
+timed_rules pop size: 0
+general_rules pop size: 8
+======== NOT-T FAMILIES ========
+Sect number (i.e. Sects / form_length): 2
+-Average bars / sect: 16
+SectA(1) dec number: 2 || SectA(1) dec number: 2 || SectB(17) dec number: 2 || SectB(17) dec number: 2 || 
+-Average bars / dec: 8
+
+boring / repetitive??
+
+============:Grammars log (end)============
+
+
+============Petrie tracking log (start):============
+
+Previous beacons read: [  ]
+Next beacons read: [  ]
+Room 1: 1, Room 2: 0
+[timestamp : [54:36.347] 
+Previous beacons read: [  ]
+Next beacons read: [  ]
+Room 1: 1, Room 2: 0
+[timestamp : [54:36.886] 
+Previous beacons read: [  ]
+Next beacons read: [  ]
+Room 1: 1, Room 2: 0
+[timestamp : [54:37.397] 
+Previous beacons read: [  ]
+Next beacons read: [  ]
+Room 1: 1, Room 2: 0
+[timestamp : [54:37.727] 
+Previous beacons read: [  ]
+Next beacons read: [  ]
+Room 1: 1, Room 2: 0
+[timestamp : [54:38.048] 
+
+============:Petrie tracking log (end)============
+
+
+============Speed log (start):============
+
+
+============:Speed log (end)============
+
+
+
+==============
+LOG END
+==============
